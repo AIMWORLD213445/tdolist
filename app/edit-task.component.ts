@@ -11,10 +11,19 @@ import { Task } from './task.model';
         <input class="form-control" [(ngModel)]="childSelectedTask.description">
       </div>
       <div class="form-group">
-        <label>Enter Task ID:</label>
-        <input class="form-control" [(ngModel)]="childSelectedTask.id">
-        <button class="btn btn-info" (click)="doneClicked()">Done</button>
+        <label>Enter Task Priority:</label>
+        <input type="radio" name="priority" [(ngModel)]="childSelectedTask.priority" value='High'> High Priority
+        <input type="radio" name="priority" [(ngModel)]="childSelectedTask.priority" value='Medium'> Medium Priority
+        <input type="radio" name="priority" [(ngModel)]="childSelectedTask.priority" value='Low'> Low Priority
       </div>
+      <div class="form-group">
+        <label>Enter Task Type</label>
+        <input type="radio" name="type" value="Home" [(ngModel)]="childSelectedTask.type"> Home
+        <input type="radio" name="type" value="Work" [(ngModel)]="childSelectedTask.type"> Work
+        <input type="radio" name="type" value="Hobby" [(ngModel)]="childSelectedTask.type">  Hobby
+      </div>
+        <button class="btn btn-info" (click)="doneClicked()">Done</button>
+
     </div>
   `
 })

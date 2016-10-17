@@ -20,12 +20,21 @@ import { Task } from './task.model';
 })
 
 export class AppComponent {
+
+
   public masterTaskList: Task[] = [
-      new Task("Create To-Do List app.", 0),
-      new Task("Learn Kung Fu.", 1),
-      new Task("Rewatch all the Lord of the Rings movies.", 2),
-      new Task("Do the laundry.", 3)
+    new Task("Do the dishes.", "High","Home"),
+    new Task("Buy chocolate.", "Low","Home"),
+    new Task("Wash the laundry.", "High","Home"),
+    new Task("Practice origami.","Low","Hobby"),
+    new Task("Bake a pie.","Low","Hobby"),
+    new Task("Update website.", "High","Work"),
+    new Task("Go to meeting.", "Medium","Work"),
+    new Task("Clean ceiling.", "Low","Work")
   ];
+
+
+
   selectedTask: Task = null;
   showDetails(clickedTask: Task) {
     this.selectedTask = clickedTask;

@@ -6,6 +6,10 @@ import { PiesListComponent } from './pies-list.component';
 import { TaskListComponent } from './task-list.component';
 import { EditTaskComponent } from './edit-task.component';
 import { NewTaskComponent } from './new-task.component';
+import { TaskComponent } from './task.component';
+import { CompletenessPipe } from './completeness.pipe';
+import { PriorityPipe } from './priority.pipe';
+import { TypePipe } from './type.pipe';
 
 @NgModule({
   imports: [
@@ -17,7 +21,11 @@ import { NewTaskComponent } from './new-task.component';
     PiesListComponent,
     TaskListComponent,
     EditTaskComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    CompletenessPipe,
+    PriorityPipe,
+    TypePipe,
+    TaskComponent
   ],
   bootstrap:    [ AppComponent ]
 })
